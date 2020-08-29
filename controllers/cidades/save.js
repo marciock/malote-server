@@ -9,6 +9,7 @@ module.exports={
 
         const  data= {
             cidade:req.body.cidade,
+            baseUnidade:req.body.baseUnidade,
             activated:true,
             createdAt:Date(),
             updatedAt:Date()

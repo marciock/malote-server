@@ -23,6 +23,10 @@ module.exports=(Sequelize,DataType)=>{
             allowNull:true,
             type:DataType.STRING
         },
+        ciade:{
+            allowNull:true,
+            type:DataType.INTEGER
+        },
         activate:{allowNull:true,
             type:DataType.BOOLEAN},
         createdAt:{
@@ -34,5 +38,13 @@ module.exports=(Sequelize,DataType)=>{
 
         }
     },{})
+    Usuarios.associate=(models)=>{
+        Usuarios.belongsTo(models.Cidades,{
+            foreingKey:'cidade',
+            targetKey:'id',
+            as:'c'
+        })
+    }
+
     return Usuarios;
 }

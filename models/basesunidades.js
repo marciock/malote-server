@@ -1,20 +1,17 @@
 module.exports=(Sequelize,DataType)=>{
 
-    const Cidades=Sequelize.define('Cidades',{
+    const BasesUnidades=Sequelize.define('BasesUnidades',{
         id:{
             allowNull:false,
             autoIncrement:true,
             primaryKey:true,
             type:DataType.INTEGER,
         },
-        cidade:{
+        nome:{
             allowNull:false,
             type:DataType.STRING,
         },
-        baseUnidade:{
-            allowNull:false,
-            type:DataType.INTEGER,
-        },
+        
         activated:{
             allowNull:false,
             type:DataType.BOOLEAN,
@@ -28,12 +25,5 @@ module.exports=(Sequelize,DataType)=>{
             type:DataType.DATE,
         }
     },{})
-    Cidades.associate=(models)=>{
-        Cidades.belongsTo(models.BasesUnidades,{
-            foreingKey:'baseUnidade',
-            targetKey:'id',
-            as:'bu'
-        })
-    }
-    return Cidades;
+    return BasesUnidades;
 }
