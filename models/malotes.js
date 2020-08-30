@@ -2,7 +2,7 @@ module.exports=(Sequelize,DataType)=>{
     const Malotes=Sequelize.define('Malotes',{
         id:{
             allowNull:true,
-            autoIncrement:true,
+            
             primaryKey:true,
             type:DataType.INTEGER
         },
@@ -50,12 +50,12 @@ module.exports=(Sequelize,DataType)=>{
     },{})
 
     Malotes.associate=(models)=>{
-        Correios.belongsTo(models.Cidades,{
+        Malotes.belongsTo(models.BasesUnidades,{
             foreingKey:'origem',
             targetKey:'id',
             as:'o'
         })
-        Malotes.belongsTo(models.Cidades,{
+        Malotes.belongsTo(models.BasesUnidades,{
             foreingKey:'destino',
             targetKey:'id',
             as:'d'
