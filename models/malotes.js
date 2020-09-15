@@ -66,7 +66,7 @@ module.exports=(Sequelize,DataType)=>{
             as:'t'
         })
         
-        Correios.belongsTo(models.Statuses,{
+        Malotes.belongsTo(models.Statuses,{
             foreingKey:'status',
             targetKey:'id',
             as:'s'
@@ -80,7 +80,7 @@ module.exports=(Sequelize,DataType)=>{
 
         
     }
-    return Correios;
+    return Malotes;
 
 
 }

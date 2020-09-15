@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Tempo de geração: 31/08/2020 às 18:49
+-- Tempo de geração: 15-Set-2020 às 06:58
 -- Versão do servidor: 8.0.21-0ubuntu0.20.04.4
--- Versão do PHP: 7.4.3
+-- versão do PHP: 7.4.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `BasesUnidades`
+-- Estrutura da tabela `BasesUnidades`
 --
 
 CREATE TABLE `BasesUnidades` (
@@ -33,13 +33,23 @@ CREATE TABLE `BasesUnidades` (
   `nome` varchar(150) NOT NULL,
   `activated` tinyint(1) NOT NULL,
   `createdAt` datetime NOT NULL,
-  `updatedAt` tinyint(1) NOT NULL
+  `updatedAt` datetime(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Extraindo dados da tabela `BasesUnidades`
+--
+
+INSERT INTO `BasesUnidades` (`id`, `nome`, `activated`, `createdAt`, `updatedAt`) VALUES
+(1, 'Curitiba', 1, '2020-09-06 22:32:15', '2020-09-06 22:32:15.0'),
+(2, 'Umuarama', 1, '2020-09-06 22:33:27', '2020-09-06 22:33:27.0'),
+(3, 'Cianorte', 1, '2020-09-06 22:34:36', '2020-09-06 22:34:36.0'),
+(4, 'Iporã', 1, '2020-09-06 22:49:06', '2020-09-06 22:49:06.0');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `Cidades`
+-- Estrutura da tabela `Cidades`
 --
 
 CREATE TABLE `Cidades` (
@@ -54,7 +64,7 @@ CREATE TABLE `Cidades` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `Envelopes`
+-- Estrutura da tabela `Envelopes`
 --
 
 CREATE TABLE `Envelopes` (
@@ -72,7 +82,7 @@ CREATE TABLE `Envelopes` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `Formas`
+-- Estrutura da tabela `Formas`
 --
 
 CREATE TABLE `Formas` (
@@ -85,7 +95,7 @@ CREATE TABLE `Formas` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `Malotes`
+-- Estrutura da tabela `Malotes`
 --
 
 CREATE TABLE `Malotes` (
@@ -106,7 +116,7 @@ CREATE TABLE `Malotes` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `Statuses`
+-- Estrutura da tabela `Statuses`
 --
 
 CREATE TABLE `Statuses` (
@@ -119,7 +129,7 @@ CREATE TABLE `Statuses` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `Tipos`
+-- Estrutura da tabela `Tipos`
 --
 
 CREATE TABLE `Tipos` (
@@ -132,7 +142,7 @@ CREATE TABLE `Tipos` (
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `Usuarios`
+-- Estrutura da tabela `Usuarios`
 --
 
 CREATE TABLE `Usuarios` (
@@ -149,66 +159,66 @@ CREATE TABLE `Usuarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Índices de tabelas apagadas
+-- Índices para tabelas despejadas
 --
 
 --
--- Índices de tabela `BasesUnidades`
+-- Índices para tabela `BasesUnidades`
 --
 ALTER TABLE `BasesUnidades`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `Cidades`
+-- Índices para tabela `Cidades`
 --
 ALTER TABLE `Cidades`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `Envelopes`
+-- Índices para tabela `Envelopes`
 --
 ALTER TABLE `Envelopes`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `Formas`
+-- Índices para tabela `Formas`
 --
 ALTER TABLE `Formas`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `Malotes`
+-- Índices para tabela `Malotes`
 --
 ALTER TABLE `Malotes`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `Statuses`
+-- Índices para tabela `Statuses`
 --
 ALTER TABLE `Statuses`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `Tipos`
+-- Índices para tabela `Tipos`
 --
 ALTER TABLE `Tipos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `Usuarios`
+-- Índices para tabela `Usuarios`
 --
 ALTER TABLE `Usuarios`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT de tabelas apagadas
+-- AUTO_INCREMENT de tabelas despejadas
 --
 
 --
 -- AUTO_INCREMENT de tabela `BasesUnidades`
 --
 ALTER TABLE `BasesUnidades`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de tabela `Cidades`
